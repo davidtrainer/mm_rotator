@@ -1,0 +1,71 @@
+.view-Rotator {
+  width: 700px;
+}
+
+.view-Rotator .views_slideshow_singleframe_slide {
+  height: 400px;
+  position: relative;
+}
+
+.view-Rotator .rotator-transparency {
+  background-color: #000;
+  bottom: 0px;
+  height: 110px;
+  left: 0px;
+  opacity: 0.7;
+  position: absolute;
+  width: 700px;
+}
+
+.view-Rotator .rotator-content {
+  bottom: 20px;
+  left: 10px;
+  position: absolute;
+}
+
+.view-Rotator h2 {
+  margin: 4px 0px;  
+}
+
+.view-Rotator h2 a:link,
+.view-Rotator h2 a:visited,
+.view-Rotator h2 a:hover,
+.view-Rotator h2 a:active {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.view-Rotator p.description {
+  color: #ddd;
+  margin: 0px;
+}
+
+.views-slideshow-controls-bottom {
+  bottom: 90px;
+  float: right;
+  right: 16px;
+  position: relative;
+  z-index: 999;
+} 
+
+.views-slideshow-controls-bottom  a:link,
+.views-slideshow-controls-bottom  a:visited,
+.views-slideshow-controls-bottom  a:hover,
+.views-slideshow-controls-bottom  a:active {
+  background: #000;
+  color: #fff;
+  font-size: .8em;
+  margin: 0px 0px;
+  padding: 4px 7px 3px;
+  text-decoration: none;  
+}
+
+.views-slideshow-controls-bottom .views_slideshow_singleframe_pager div {
+  padding-left: 8px;
+}
+
+.views-slideshow-controls-bottom .activeSlide a {
+  background: #333;
+}
