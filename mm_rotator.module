@@ -1,3 +1,16 @@
 <?php
 
-// Drupal needs this blank file.
+include_once('mm_rotator.features.inc');
+
+/**
+ * Implementation of hook_init().
+ *
+ * We can't move this into admin_menu_footer(), because PHP-only based themes
+ * like chameleon load and output scripts and stylesheets in front of
+ * theme_closure(), so we ensure Admin menu's styles and scripts are loaded on
+ * all pages via hook_init().
+ */
+function mm_rotator_init() {
+  $path = drupal_get_path('module', 'mm_rotator');
+  drupal_add_css($path .'/mm_rotator.css', 'module', 'all', FALSE);
+}
