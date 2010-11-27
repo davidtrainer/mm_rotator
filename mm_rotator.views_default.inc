@@ -125,7 +125,7 @@ function mm_rotator_views_default_views() {
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'default',
+      'format' => 'plain',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -144,8 +144,8 @@ function mm_rotator_views_default_views() {
         'alter_text' => 1,
         'text' => '<div class="rotator-transparency"></div>
 <div class="rotator-content">
-<h2><a href="field_mm_rotator_link_url">[title]</a></h2>
-<p class="description">[field_mm_rotator_description_value]</p>
+<h2><a href="[field_mm_rotator_link_url]">[title]</a></h2>
+[field_mm_rotator_description_value]
 </div>
 ',
         'make_link' => 0,
@@ -257,6 +257,9 @@ function mm_rotator_views_default_views() {
     'weight' => 0,
     'name' => 'navigation',
   ));
+  $handler = $view->new_display('block', 'Rotator Block', 'block_1');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
 
   $views[$view->name] = $view;
 
